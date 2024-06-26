@@ -1,0 +1,37 @@
+{% extends 'index.html'  %}
+{% load static %}
+
+{% block title %}
+About me - Shivanshu P.
+{% endblock title %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'about.css' %}" />
+{% endblock links %}
+
+{% block main %}
+<div class="responsive-container-block big-container">
+    <div class="responsive-container-block container">
+      <div class="responsive-container-block">
+        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-12 img-one">
+          <img alt="golden-lines.png" class="image-block bg-image" src="{% static 'about-bg.png' %}">
+        </div>
+        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-12 content-one">
+          <p class="text-blk section-head">
+            Shivanshu Prajapati
+          </p>
+          <p class="text-blk section-text">
+            Hi, I am Shivanshu Prajapati and I am 13 years old
+            I am learning to code and programming
+            for my great future jobs and development
+          </p>
+          <p class="text-blk section-text">
+            I am Planning to make a business or a SaaS project
+            that I will be working on after this project
+            and it will give me the finacial freedom that I need.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock main %}
