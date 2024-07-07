@@ -1,0 +1,67 @@
+/* Reset and general styles */
+.blog-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.post {
+    background-color: rgb(67, 14, 116);
+    box-shadow: black 1px 1px;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.333% - 20px); /* Three posts per row */
+    margin-bottom: 20px;
+    position: relative; /* Needed for positioning the Read More link */
+}
+.post:hover {
+    transform: translateY(-5px);
+}
+.post h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Light text */
+}
+.post .meta {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+.post .content {
+    color: #ccc;
+    line-height: 1.8;
+    height: 200px; /* Fixed height for content */
+    overflow: hidden;
+}
+.read-more {
+    position: absolute;
+    bottom: 20px; /* Stick to the bottom */
+    right: 20px;
+}
+.read-more a {
+    text-decoration: none;
+    color: #fff; /* Blue-violet color */
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+.read-more a i {
+    margin-left: 5px;
+}
+/* Responsive styles */
+@media (max-width: 992px) {
+    .post {
+        width: calc(50% - 20px); /* Two posts per row on medium screens */
+    }
+}
+@media (max-width: 768px) {
+    .post {
+        width: 100%; /* One post per row on small screens */
+    }
+}

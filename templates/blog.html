@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'blog.css' %}">
+{% endblock links %}
+{% block main %}
+<h2 class="title">Blog Posts</h2>
+<div class="blog-container">
+    <div class="posts">
+        {% load custom_filter %}
+        {% for post in posts %}
+            <div class="post">
+                <h2>{{ post.title }}</h2>
+                <div class="meta">
+                    <span><i class="far fa-user"></i>by {{ post.author }}</span>
+                    <span><i class="far fa-calendar-alt"></i> {{ post.created_date|date:"F d, Y" }}</span>
+                </div>
+                <div class="content">
+                    <p>{{ post.content|truncate_chars:250 }}</p>
+                </div>
+                <div class="read-more">
+                    <a href="{% url 'myblog:post_detail' post.id %}">
+                        Read More <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock main %}

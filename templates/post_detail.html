@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'blog_detail.css' %}">
+{% endblock links %}
+{% block main %}
+
+<div class="container">
+    <div class="post">
+        <h2 class="title">{{ post.title }}</h2>
+        <div class="meta">
+            <span><i class="far fa-user"></i>by {{ post.author }}</span>
+            <span><i class="far fa-calendar-alt"></i> {{ post.created_date|date:"F d, Y" }}</span>
+        </div>
+        <div class="content">
+            <p>{{ post.content }}</p>
+        </div>
+    </div>
+    <div class="back-link">
+        <a href="{% url 'index' %}">
+            <i class="fas fa-chevron-left"></i> Back to Blog
+        </a>
+    </div>
+</div>
+{% endblock main %}

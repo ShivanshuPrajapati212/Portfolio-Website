@@ -1,0 +1,42 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.post {
+    background-color: rgb(67, 14, 116); /* Darker background for posts */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.post h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #fff; /* Light text */
+}
+.post .meta {
+    font-size: 1;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+.post .content {
+    font-size: 20px;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+.back-link {
+    margin-top: 20px;
+    text-align: right;
+}
+.back-link a {
+    text-decoration: none;
+    color: #fff; /* Blue-violet color */
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+.back-link a i {
+    margin-right: 5px;
+}
